@@ -4,8 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingTop="32dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="32dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_detail">
+
+    <TextView
+        android:id="@+id/label_file_name"
+        style="@style/Label"
+        android:text="@string/file_name"
+        app:layout_constraintEnd_toStartOf="@id/file_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/file_name" />
+
+    <TextView
+        android:id="@+id/file_name"
+        style="@style/DetailText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_file_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/radio_glide" />
+
+    <TextView
+        android:id="@+id/label_status"
+        style="@style/Label"
+        android:text="@string/status"
+        app:layout_constraintEnd_toStartOf="@id/status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/status" />
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/DetailText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_status"
+        app:layout_constraintTop_toBottomOf="@id/file_name"
+        tools:text="Success" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
