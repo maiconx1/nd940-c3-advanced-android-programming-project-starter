@@ -1,14 +1,12 @@
 <resources>
     <string name="app_name">LoadApp</string>
     <string name="app_description">Download files from Internet</string>
-    <string name="action_settings">Settings</string>
 
 
     <string name="notification_title">Udacity: Android Kotlin Nanodegree </string>
     <string name="notification_description">The Project 3 repository is downloaded</string>
     <string name="notification_button">See changes</string>
 
-    <string name="button_name">Click me</string>
     <string name="button_loading">We are loading</string>
     <string name="toast_select_file">Please select the file to download</string>
     <string name="title_activity_detail">DetailActivity</string>
@@ -21,7 +19,6 @@
     <string name="status">Status:</string>
     <string name="ok">OK</string>
     <string name="download">Download</string>
-    <string name="progress_download">We are downloading</string>
     <string name="success">Success</string>
     <string name="fail">Fail</string>
 </resources>

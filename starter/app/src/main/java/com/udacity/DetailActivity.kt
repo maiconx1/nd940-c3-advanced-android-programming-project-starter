@@ -1,7 +1,5 @@
 package com.udacity
 
-import android.content.Intent
-import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.udacity.Constants.Companion.EXTRA_NAME

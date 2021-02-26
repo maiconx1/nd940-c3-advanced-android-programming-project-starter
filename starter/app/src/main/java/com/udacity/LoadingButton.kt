@@ -3,13 +3,9 @@ package com.udacity
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.*
-import android.graphics.Typeface.BOLD
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
-import androidx.core.content.ContextCompat.getColor
 import androidx.core.content.withStyledAttributes
-import kotlinx.android.synthetic.main.content_main.*
 import kotlin.properties.Delegates
 
 private const val PROGRESS_PADDING = 30f
