@@ -12,63 +12,72 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/cloud_download"
         android:background="@color/colorPrimaryDark"
         android:contentDescription="@string/description_download_image"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/cloud_download"
+        app:layout_constraintBottom_toBottomOf="@id/guide"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/guide"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide"
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
+
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/guide"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/custom_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/custom_button">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide">
 
         <RadioButton
             android:id="@+id/radio_glide"
-            android:layout_margin="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/default_text_size"
-            android:text="@string/radio_glide"/>
+            android:layout_margin="16dp"
+            android:text="@string/radio_glide"
+            android:textSize="@dimen/default_text_size" />
 
         <RadioButton
             android:id="@+id/radio_loadapp"
-            android:layout_margin="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/default_text_size"
-            android:text="@string/radio_loadapp"/>
+            android:layout_margin="16dp"
+            android:text="@string/radio_loadapp"
+            android:textSize="@dimen/default_text_size" />
 
         <RadioButton
             android:id="@+id/radio_retrofit"
-            android:layout_margin="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/default_text_size"
-            android:text="@string/radio_retrofit"/>
+            android:layout_margin="16dp"
+            android:text="@string/radio_retrofit"
+            android:textSize="@dimen/default_text_size" />
     </RadioGroup>
 
     <com.udacity.LoadingButton
         android:id="@+id/custom_button"
         android:layout_width="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:background="@color/colorPrimary"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:circularProgressColor="@color/colorAccent"
+        app:horizontalProgressColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:loadingText="@string/progress_download"
+        app:progressRadius="30.0"
+        app:text="@string/download"
+        app:textColor="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

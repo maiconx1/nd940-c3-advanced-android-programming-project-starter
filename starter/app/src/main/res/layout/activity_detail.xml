@@ -22,14 +22,25 @@
 
     <include layout="@layout/content_detail" />
 
-    <Button
-        android:id="@+id/button_ok"
-        style="@style/Widget.MaterialComponents.Button"
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|center"
         android:layout_margin="16dp"
-        android:text="@string/ok"
-        android:textSize="@dimen/default_text_size" />
+        app:layoutDescription="@xml/activity_detail_motion">
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
